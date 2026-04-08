@@ -41,7 +41,7 @@ flowchart LR
     L --> M[Metrics, Ablations, Failure Analysis]
 ```
 
-More detail lives in [architecture.md](/Users/srini/quantum-6g-edge-runtime/QEdge6G/docs/architecture.md).
+More detail lives in [architecture.md](docs/architecture.md).
 
 ## Optimization Summary
 
@@ -69,7 +69,7 @@ Subject to:
 - tenant-slice radio caps
 - tenant-slice edge caps
 
-The QUBO uses exact one-hot penalties plus capacity slack variables so decoded solutions can be checked against the same constraints used by the heuristics and exact baseline. The formulation and scaling caveats are documented in [qubo_formulation.md](/Users/srini/quantum-6g-edge-runtime/QEdge6G/docs/qubo_formulation.md).
+The QUBO uses exact one-hot penalties plus capacity slack variables so decoded solutions can be checked against the same constraints used by the heuristics and exact baseline. The formulation and scaling caveats are documented in [qubo_formulation.md](docs/qubo_formulation.md).
 
 ## Why Quantum-Inspired Methods Are Relevant
 
@@ -116,17 +116,17 @@ Primary metrics:
 - solution quality gap
 - constraint satisfaction rate
 
-Benchmark protocol is documented in [benchmark_protocol.md](/Users/srini/quantum-6g-edge-runtime/QEdge6G/docs/benchmark_protocol.md).
+Benchmark protocol is documented in [benchmark_protocol.md](docs/benchmark_protocol.md).
 
 ## Smoke Results
 
 The following numbers come from checked-in CSV artifacts:
 
-- [wireless_dense.csv](/Users/srini/quantum-6g-edge-runtime/QEdge6G/results/tables/wireless_dense.csv)
-- [tcp_bursty.csv](/Users/srini/quantum-6g-edge-runtime/QEdge6G/results/tables/tcp_bursty.csv)
-- [trace_replay.csv](/Users/srini/quantum-6g-edge-runtime/QEdge6G/results/tables/trace_replay.csv)
-- [tenant_slicing.csv](/Users/srini/quantum-6g-edge-runtime/QEdge6G/results/tables/tenant_slicing.csv)
-- [sensitivity_sweep.csv](/Users/srini/quantum-6g-edge-runtime/QEdge6G/results/tables/sensitivity_sweep.csv)
+- [wireless_dense.csv](results/tables/wireless_dense.csv)
+- [tcp_bursty.csv](results/tables/tcp_bursty.csv)
+- [trace_replay.csv](results/tables/trace_replay.csv)
+- [tenant_slicing.csv](results/tables/tenant_slicing.csv)
+- [sensitivity_sweep.csv](results/tables/sensitivity_sweep.csv)
 
 | Scenario | Solver | Mean Latency (ms) | p95 (ms) | Goodput (Mbps) | Fairness | Runtime (s) | Observation |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
@@ -147,8 +147,8 @@ Current takeaways:
 
 Plots generated from the dense smoke benchmark:
 
-- [solver_latency.png](/Users/srini/quantum-6g-edge-runtime/QEdge6G/results/figures/solver_latency.png)
-- [queue_delay.png](/Users/srini/quantum-6g-edge-runtime/QEdge6G/results/figures/queue_delay.png)
+- [solver_latency.png](results/figures/solver_latency.png)
+- [queue_delay.png](results/figures/queue_delay.png)
 
 ## Failure Cases
 
@@ -159,7 +159,7 @@ Plots generated from the dense smoke benchmark:
 - Synthetic topology generation is representative but not trace-perfect; assumptions are documented and should be challenged.
 - MILP runtime is already growing with richer constraints and larger candidate sets, which is a core scaling signal rather than an implementation bug.
 
-See [failure_analysis.md](/Users/srini/quantum-6g-edge-runtime/QEdge6G/docs/failure_analysis.md) for the current honest readout.
+See [failure_analysis.md](docs/failure_analysis.md) for the current honest readout.
 
 ## Reproducibility
 
