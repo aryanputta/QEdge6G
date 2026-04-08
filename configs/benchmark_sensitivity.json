@@ -1,0 +1,7 @@
+{
+  "traffic.num_users": [6, 8, 10],
+  "topology.backhaul_capacity_mbps": [90, 140, 200],
+  "ml.forecast_error_std": [0.0, 0.1, 0.25],
+  "solver.qubo_penalty_scale": [32.0, 44.0, 60.0]
+}
+

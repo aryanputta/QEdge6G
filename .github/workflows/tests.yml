@@ -1,0 +1,16 @@
+name: smoke-tests
+
+on:
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - run: python -m src.cli run-scenario --scenario configs/simulation/wireless_dense.yaml --solver greedy
+

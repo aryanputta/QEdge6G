@@ -1,0 +1,4 @@
+solver:
+  strategy: exact
+  exact_baseline_user_cutoff: 10
+

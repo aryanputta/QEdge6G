@@ -1,0 +1,16 @@
+scenario:
+  name: mixed_workload_classes
+  steps: 6
+  seed: 37
+
+traffic:
+  num_users: 8
+  workload_mix:
+    xr: 0.25
+    video: 0.25
+    inference: 0.25
+    telemetry: 0.25
+
+ml:
+  enabled: true
+

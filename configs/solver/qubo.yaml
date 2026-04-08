@@ -1,0 +1,5 @@
+solver:
+  strategy: quantum_inspired
+  bandwidth_unit_mbps: 10
+  radio_unit_mhz: 5
+

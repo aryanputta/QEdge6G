@@ -1,0 +1,80 @@
+scenario:
+  name: base
+  seed: 7
+  steps: 6
+  degradation_event: {}
+
+topology:
+  num_base_stations: 3
+  num_edges: 3
+  num_aggregation_nodes: 2
+  area_km: 2.0
+  base_station_spectrum_mhz: 100
+  rb_budget: 100
+  backhaul_capacity_mbps: 160
+  backhaul_latency_ms: [2.0, 6.0]
+  backhaul_buffer_mbits: 240
+  edge_relay_links: true
+
+traffic:
+  num_users: 8
+  workload_mix:
+    xr: 0.25
+    video: 0.35
+    inference: 0.25
+    telemetry: 0.15
+  mobility_speed_mps: 1.2
+  tenants:
+    tenant0: 0.45
+    tenant1: 0.35
+    tenant2: 0.20
+  slices:
+    URLLC:
+      share: 0.20
+      priority_weight: 1.30
+      max_radio_share: 0.45
+      max_edge_share: 0.45
+    eMBB:
+      share: 0.55
+      priority_weight: 1.00
+      max_radio_share: 0.70
+      max_edge_share: 0.70
+    mMTC:
+      share: 0.25
+      priority_weight: 0.80
+      max_radio_share: 0.35
+      max_edge_share: 0.35
+
+wireless:
+  channel_volatility: 0.08
+  interference_aggressiveness: 0.24
+  degradation_bias: 0.0
+  handoff_hysteresis_km: 0.05
+  handoff_dwell_slots: 2
+  handoff_blackout_penalty_ms: 4.0
+
+transport:
+  mode: tcp
+
+edge:
+  capacity_units: [24, 20, 28]
+  service_rate_units: [18, 16, 20]
+  queue_buffer_units: 64
+  energy_cost: 1.0
+
+solver:
+  bandwidth_unit_mbps: 10
+  radio_unit_mhz: 5
+  candidate_edges_per_user: 2
+  candidate_paths_per_edge: 2
+  exact_baseline_user_cutoff: 10
+  fairness_reward_floor: 4.0
+  rolling_horizon_steps: 1
+  warm_start: false
+  qubo_penalty_scale: 44.0
+  qubo_capacity_penalty_scale: 24.0
+  milp_time_limit_s: 20.0
+
+ml:
+  enabled: false
+  forecast_error_std: 0.0

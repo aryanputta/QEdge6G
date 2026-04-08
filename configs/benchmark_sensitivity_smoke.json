@@ -1,0 +1,5 @@
+{
+  "traffic.num_users": [6, 9],
+  "topology.backhaul_capacity_mbps": [100, 180],
+  "ml.forecast_error_std": [0.0, 0.2]
+}

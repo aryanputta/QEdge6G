@@ -1,0 +1,9 @@
+services:
+  qedge6g:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ..:/app
+    command: python -m src.cli benchmark-suite --output-dir results/tables
+

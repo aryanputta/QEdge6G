@@ -1,0 +1,20 @@
+scenario:
+  name: mobility_event
+  steps: 6
+  seed: 29
+  degradation_event:
+    start_step: 2
+    end_step: 5
+    links:
+      - bs0::agg0
+      - agg0::edge0
+    factor: 0.55
+
+traffic:
+  num_users: 8
+  mobility_speed_mps: 5.0
+
+wireless:
+  channel_volatility: 0.14
+  degradation_bias: 0.02
+

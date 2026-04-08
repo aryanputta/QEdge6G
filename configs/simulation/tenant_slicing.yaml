@@ -1,0 +1,34 @@
+scenario:
+  name: tenant_slicing
+  steps: 6
+  seed: 47
+
+traffic:
+  num_users: 9
+  tenants:
+    enterprise: 0.35
+    retail: 0.40
+    public_iot: 0.25
+  slices:
+    URLLC:
+      share: 0.25
+      priority_weight: 1.45
+      max_radio_share: 0.50
+      max_edge_share: 0.50
+    eMBB:
+      share: 0.50
+      priority_weight: 1.00
+      max_radio_share: 0.70
+      max_edge_share: 0.70
+    mMTC:
+      share: 0.25
+      priority_weight: 0.78
+      max_radio_share: 0.30
+      max_edge_share: 0.30
+
+solver:
+  warm_start: true
+
+ml:
+  enabled: true
+

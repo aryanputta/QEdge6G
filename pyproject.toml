@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qedge6g"
+version = "0.1.0"
+description = "Transport-aware quantum-inspired edge resource allocation engine for AI-native 6G systems."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+  { name = "OpenAI Codex" }
+]
+dependencies = [
+  "matplotlib>=3.8",
+  "networkx>=3.2",
+  "numpy>=1.26",
+  "pandas>=2.2",
+  "PyYAML>=6.0",
+  "scikit-learn>=1.5",
+  "scipy>=1.13",
+  "seaborn>=0.13",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+]
+
+[tool.setuptools]
+packages = [
+  "src",
+  "src.utils",
+  "src.network",
+  "src.wireless",
+  "src.transport",
+  "src.edge",
+  "src.workloads",
+  "src.optimization",
+  "src.solvers",
+  "src.ml",
+  "src.simulation",
+  "src.benchmarks",
+  "src.analysis",
+  "src.visualization",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

@@ -1,0 +1,17 @@
+scenario:
+  name: backhaul_bottleneck
+  steps: 6
+  seed: 31
+
+topology:
+  backhaul_capacity_mbps: 90
+  backhaul_buffer_mbits: 160
+
+traffic:
+  num_users: 8
+  workload_mix:
+    xr: 0.30
+    video: 0.40
+    inference: 0.20
+    telemetry: 0.10
+

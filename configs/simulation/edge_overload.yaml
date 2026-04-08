@@ -1,0 +1,17 @@
+scenario:
+  name: edge_overload
+  steps: 6
+  seed: 23
+
+traffic:
+  num_users: 8
+  workload_mix:
+    xr: 0.15
+    video: 0.20
+    inference: 0.50
+    telemetry: 0.15
+
+edge:
+  capacity_units: [14, 12, 16]
+  service_rate_units: [10, 9, 12]
+

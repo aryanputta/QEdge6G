@@ -1,0 +1,16 @@
+scenario:
+  name: trace_replay
+  steps: 8
+  seed: 43
+
+traffic:
+  trace_path: data/raw/sample_edge_trace.csv
+  num_users: 4
+
+solver:
+  warm_start: true
+  rolling_horizon_steps: 3
+
+ml:
+  enabled: true
+

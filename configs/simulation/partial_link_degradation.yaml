@@ -1,0 +1,12 @@
+scenario:
+  name: partial_link_degradation
+  steps: 6
+  seed: 41
+  degradation_event:
+    start_step: 1
+    end_step: 6
+    links:
+      - agg0::edge0
+      - agg0::agg1
+    factor: 0.6
+

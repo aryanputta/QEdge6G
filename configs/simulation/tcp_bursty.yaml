@@ -1,0 +1,19 @@
+scenario:
+  name: tcp_bursty
+  steps: 6
+  seed: 17
+
+traffic:
+  num_users: 8
+  workload_mix:
+    xr: 0.20
+    video: 0.50
+    inference: 0.20
+    telemetry: 0.10
+
+wireless:
+  channel_volatility: 0.10
+
+transport:
+  mode: tcp
+
