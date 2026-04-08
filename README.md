@@ -178,20 +178,5 @@ You can also use:
 - `make smoke`
 - `make benchmark`
 
-## Limitations
 
-- The exact reference now uses `scipy.optimize.milp`, but it is still a moderate-scale benchmark tool rather than a cluster-grade production optimizer.
-- TCP and QUIC are stronger flow-level models with cwnd, pacing, BDP, retransmission, and RTT inflation effects, but they are not packet-level emulators such as ns-3.
-- Mobility includes hysteresis, dwell time, and handoff penalty modeling, but not a full RAN control-plane handover stack.
-- The AI assist path now uses trainable lag-based regressors for demand and link forecasts, but it still needs a richer congestion-prediction loop and external validation traces.
 
-## Next Steps
-
-- Add larger overnight sweep presets that cover burstiness, slice caps, packet loss, and QUBO penalty scaling beyond the checked-in smoke sweep.
-- Push the trace-replay path toward public carrier or datacenter traces instead of only the bundled sample trace.
-- Tighten the quantum-inspired move set so it beats greedy more consistently without relying on a safety fallback.
-- Add per-slice SLA and tenant-level reporting dashboards to the benchmark notebooks.
-
-## Resume-Ready Outcome
-
-Built a transport-aware quantum-inspired resource allocation engine for 6G edge systems that jointly optimized user assignment, routing, bandwidth tiers, and edge compute under congestion and latency constraints, benchmarked against greedy, exact, and annealing baselines using tail latency, goodput, fairness, and solver quality metrics.
