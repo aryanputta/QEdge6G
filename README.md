@@ -145,10 +145,6 @@ Current takeaways:
 - In `tcp_bursty`, `trace_replay`, and `tenant_slicing`, the MILP backend is the strongest checked-in reference and the quantum-inspired path often trades goodput or runtime for only modest latency movement.
 - In `edge_overload`, the quantum-inspired solver currently falls back to the greedy allocation, which is an intentional safety guard rather than a hidden failure.
 
-Plots generated from the dense smoke benchmark:
-
-- [solver_latency.png](results/figures/solver_latency.png)
-- [queue_delay.png](results/figures/queue_delay.png)
 
 ## Failure Cases
 
