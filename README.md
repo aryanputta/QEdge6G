@@ -178,5 +178,9 @@ You can also use:
 - `make smoke`
 - `make benchmark`
 
+## Repository Contents
 
-
+- `docs/` contains the architecture, system assumptions, QUBO write-up, benchmark protocol, and failure-analysis notes.
+- `notebooks/` contains executed analysis notebooks with checked-in outputs rather than import-only placeholders.
+- `results/tables/` and `results/figures/` contain the checked-in smoke benchmark artifacts referenced above.
+- `tests/` covers unit, integration, regression, and stress paths for the optimization and simulation loop.
